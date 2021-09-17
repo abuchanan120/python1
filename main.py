@@ -9,7 +9,7 @@ def print_inputs():
 
     print("Enter a number:")
     number=int(input())
-    print(number, "multiplied by itself=",number * number)
+    print(number, " multiplied by ",number,"= ",number * number,sep="")
 
     print("Enter a word:")
     word=input()
