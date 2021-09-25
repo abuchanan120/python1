@@ -40,6 +40,7 @@ def array_art():
         print() #carriage-return
 
 def coin_flip():
+    #Prompt for user choice
     print("Please choose either 0 or 1:")
     choice=int(input())
 
@@ -52,10 +53,10 @@ def coin_flip():
     else:
         print("The Computer wins!")
 
-# Press the green button in the gutter to run the script.
+# Main code execution
 if __name__ == '__main__':
-    start=1
-    done=0
+    start=1 #Allows user to start playing, keep playing, or stop playing
+    done=0 #Shows when a user has played a game already
     while start==1:
         print("Which game would you like to play?")
         print("[1] - Array Art")
