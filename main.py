@@ -9,7 +9,6 @@ import platform
 def os_desc():
     print("Your system is running:", platform.platform(), "with a(n)", platform.machine(), "processor.")
 
-
 # Main code execution
 if __name__ == '__main__':
     os_desc()
