@@ -55,30 +55,5 @@ def coin_flip():
 
 # Main code execution
 if __name__ == '__main__':
-    start=1 #Allows user to start playing, keep playing, or stop playing
-    done=0 #Shows when a user has played a game already
-    while start==1:
-        print("Which game would you like to play?")
-        print("[1] - Array Art")
-        print("[2] - Coin Flip")
-        game=int(input())
-        #Chooses which function to run based off which game was chosen
-        if game==1:
-            array_art()
-            done=1
-        elif game==2:
-            coin_flip()
-            done=1
-        else:
-            print("Please choose one of the available options.")
 
-        #Asks if the user wants to play again after a game was played
-        if done==1:
-            print("Would you like to play another game? [Y/N]")
-            again=input().lower()
-            if again=='y':
-                continue
-            else:
-                start=0
-                break
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
