@@ -4,11 +4,17 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import sys
 
+#Concatenates all arguments into a single string, separated by '-', and prints it
+def joinArgs(argmt):
+    print("-".join(argmt))
 
+#Capitalizes arguments and prints them
+def capitalArgs(argmt):
+    for arg in argmt:
+        print(arg.capitalize(), end=" ")
 
 # Main code execution
 if __name__ == '__main__':
-    print(f"Arguments Count: {len(sys.argv)}")
-    for i, arg in enumerate(sys.argv):
-        print(f"Argument {i:>6}: {arg}")
+    joinArgs(sys.argv)
+    capitalArgs(sys.argv)
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
