@@ -8,10 +8,12 @@ import re, os, platform   #the os.uname() appears to only work on UNIX systems,
 
 # Main code execution
 if __name__ == '__main__':
-    str1 = str(platform.uname())
+    str1 = str(platform.uname())    #os.uname() doesn't work for Windows
     string = str(os.getcwd())
     #Regex searching
     result = re.search("Windows", str1)     #Matches because string contains Windows
+    print(result)
+    result = re.search("Windows|Linux", str1)   #Matches because at least one of Windows/Linux were found
     print(result)
     result = re.search("AMD64", str1)       #Matches because string contains AMD64
     print(result)
