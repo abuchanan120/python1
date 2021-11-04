@@ -1,36 +1,23 @@
-# This is a sample Python script.
+# Andrew Buchanan Python 1
+# Programming Assignment 7
+# November 4, 2021
+# Using re and os modules to experiment with regex and os output
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-#Breaks up a given string with split()
-def breakUp1(str):
-    new = str.split()
-    for i in new:
-        print(i)
-
-#Breaks up a given string without split()
-def breakUp2(str):
-    list = []
-    temp = ""
-    #Break up the string into a list
-    for i in str:
-        if i == " ":
-            list.append(temp)
-            temp = ""
-        else:
-            temp += i
-    if temp:
-        list.append(temp)
-
-    #Print the string
-    for k in list:
-        print(k)
+import re, os, platform   #the os.uname() appears to only work on UNIX systems,
+                #but platform.uname() can be used on Windows
 
 # Main code execution
 if __name__ == '__main__':
-    string=input("Enter a string:")
-    breakUp1(string)
-    breakUp2(string)
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    str1 = str(platform.uname())
+    string = str(os.getcwd())
+    #Regex searching
+    result = re.search("Windows", str1)     #Matches because string contains Windows
+    print(result)
+    result = re.search("AMD64", str1)       #Matches because string contains AMD64
+    print(result)
+    result = re.match("uname_result", str1) #Matches because string starts with pattern
+    print(result)
+    result = re.match("version", str1)      #Won't match because string doesn't start with version
+    print(result)
+    result = re.search("Users", string)     #Matches because Users is in the string
+    print(result)
