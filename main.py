@@ -10,7 +10,7 @@ import re, os, platform   #the os.uname() appears to only work on UNIX systems,
 if __name__ == '__main__':
     str1 = str(platform.uname())    #os.uname() doesn't work for Windows
     string = str(os.getcwd())       #os.getcwd() prints the current working directory
-
+    str2 = str(os.name)
     #Regex searching
     result = re.search("Windows", str1)     #Matches because string contains Windows
     print("1.", result)
@@ -24,3 +24,5 @@ if __name__ == '__main__':
     print("5.", result)
     result = re.search("Users", string)     #Matches because Users is in the string
     print("6.", result)
+    result = re.match("nt", str2)           #Matches because str2 contains os.name which returned 'nt'
+    print("7.", result)
