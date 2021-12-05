@@ -6,23 +6,6 @@
 import random
 
 
-def print_inputs():
-    #Ask for name and print to output
-    print("What is your name?")
-    name=input()
-    print("Your name is:",name)
-    #Ask for a number, square it, and display it
-    print("Enter a number:")
-    number=int(input())
-    print(number, " multiplied by ",number,"= ",number * number,sep="")
-    #Ask for a word, display the number of letters
-    print("Enter a word:")
-    word=input()
-    print("Number of letters in ",word,": ",word.__len__(),sep="")
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 def array_art():
     arr=[['.', 'O', '.', 'O', '.', 'O', '.'],
