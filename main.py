@@ -20,7 +20,7 @@ class Bird:
 
     #reads a Bird object's attributes back to the user
     def readAttributes(self):
-        print("My name is ", self.name, " and I am a ", self.color," ", self.classification, sep="")
+        print("My name is {}".format(self.name), " and I am a {}".format(self.color), " ", self.classification, sep="")
 
     #sets a Bird's color attribute by allowing the user to choose or randomize from the above colors list
     def setColor(self,color):
