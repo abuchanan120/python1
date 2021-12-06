@@ -1,22 +1,31 @@
 # Andrew Buchanan
-# Python 1 Programming Assignment 2
-# Completed on time, but was submitted with another branch since it wasn't clearly specified to create a new one.
+# Python 1 Programming Assignment 8
+# December 6, 2021
+# Object Oriented Programming
+import random
 
-def print_inputs():
-    #Ask for name and print to output
-    print("What is your name?")
-    name=input()
-    print("Your name is:",name)
-    #Ask for a number, square it, and display it
-    print("Enter a number:")
-    number=int(input())
-    print(number, " multiplied by ",number,"= ",number * number,sep="")
-    #Ask for a word, display the number of letters
-    print("Enter a word:")
-    word=input()
-    print("Number of letters in ",word,": ",word.__len__(),sep="")
+class Bird:
+
+    #attributes
+    classification = "bird"
+    colors = ["blue", "red", "grey", "black", "brown"]
+
+    #instance method allows user to assign bird name and gives it a random color
+    def __init__(self, name):
+        self.name = name
+        self.color = random.choice(Bird.colors)
+
+    #reads a Bird object's attributes back to the user
+    def readAttributes(self):
+        print("My name is ", self.name, " and I am a ", self.color," ", self.classification, sep="")
 
 # Main code execution
-if __name__ == '__main__':
-    print_inputs()
+print("What would you like to name your bird?")
+birdname1 = input()
+print("Nice name! What about your second bird?")
+birdname2 = input()
+bird1 = Bird(birdname1)
+bird2 = Bird(birdname2)
+bird1.readAttributes()
+bird2.readAttributes()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
